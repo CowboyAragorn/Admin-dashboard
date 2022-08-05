@@ -51,6 +51,9 @@ table {
     height: 100%;
     width: 100%;
 }
+html{
+    height: 100%;
+}
 body{
     height: 100%;
     width: 100%;
@@ -71,6 +74,8 @@ body{
     color: white;
     font-weight: bold;
     align-items: flex-start;
+    height: 100%;
+    width: 100%;
 }
 #sidebarHeader{
     font-size: 2.5rem;
@@ -179,13 +184,38 @@ body{
         }
 
 #contentContainer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3,1ft);
+    display: flex;
     gap: 50px;
     padding: 50px;
     background-color: lightgrey;
+    flex-grow: 1;
 }
+    #projectContainerFlex,#announceFlexContainer,#trendFlexContainer{
+        display: grid;
+        grid-template-rows: 30px 1fr;
+    }
+    #projectsContainer{
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        gap: 25px;
+        height: 100%;
+    }
+        .contentTitle{
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    #announceAndTrendContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 50px
+    }
 .project{
     background-color: yellow;
+}
+#announce{
+    background-color: white;
+}
+#trend{
+    background-color: white;
 }
